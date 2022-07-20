@@ -10,8 +10,10 @@ export default function callWeatherAPI() {
         } catch (err) {
         console.log(err);
         }
-    
+        
     };
+
+    
 
   return (
     <div>
