@@ -1,0 +1,58 @@
+{
+    "weatherIcons": [
+        {
+            "weatherId": 1,
+            "dayIcon": "01d.png",
+            "nightIcon": "01n.png",
+            "description": "clear sky"
+        },
+        {
+            "weatherId": 2,
+            "dayIcon": "02d.png",
+            "nightIcon": "02n.png",
+            "description": "few clouds"
+        },
+        {
+            "weatherId": 3,
+            "dayIcon": "03d.png",
+            "nightIcon": "03n.png",
+            "description": "scattered clouds"
+        },
+        {
+            "weatherId": 4,
+            "dayIcon": "04d.png",
+            "nightIcon": "04n.png",
+            "description": "broken clouds"
+        },
+        {
+            "weatherId": 9,
+            "dayIcon": "09d.png",
+            "nightIcon": "09n.png",
+            "description": "shower rain"
+        },
+        {
+            "weatherId": 10,
+            "dayIcon": "10d.png",
+            "nightIcon": "10n.png",
+            "description": "rain"
+        },
+        {
+            "weatherId": 11,
+            "dayIcon": "11d.png",
+            "nightIcon": "11n.png",
+            "description": "thunderstorm"
+        },
+        {
+            "weatherId": 13,
+            "dayIcon": "13d.png",
+            "nightIcon": "13n.png",
+            "description": "snow"
+        },
+        {
+            "weatherId": 50,
+            "dayIcon": "50d.png",
+            "nightIcon": "50n.png",
+            "description": "mist"
+        }
+    ]
+}
