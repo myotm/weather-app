@@ -11,7 +11,6 @@ export default function WeatherComponent() {
   const [temperature, setTemperature] = React.useState(0);
   const [description, setDescription] = React.useState("");
   const [location, setLocation] = React.useState("");
-  
 
   const onZipCodeChange = (e) => {
       const {value}  = e.target;
@@ -50,15 +49,14 @@ export default function WeatherComponent() {
           <b>COUNTRY CODE</b>
           <input type="text" value={countryCode} onChange={onCountryCodeChange}/>
         </div>
-        <Link href={`/`}>
-          <button onClick={callWeatherAPI}>Get Weather now!</button>
-        </Link>
+        <button onClick={callWeatherAPI}>Get Weather now!</button>
         <ul>
           <li>{iconCode}</li>
           <li>{description}</li>
           <li>{temperature}</li>
           <li>{location}</li>
         </ul>
+        <ResultPage icon={iconCode} description={description} temperature={temperature} location={location}/>
     </div>
   )
 }
