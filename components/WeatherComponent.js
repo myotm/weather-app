@@ -31,7 +31,6 @@ export default function WeatherComponent() {
         }
       });
     } catch (err) {
-      alert(err);
       console.log(err);
     }
   }
