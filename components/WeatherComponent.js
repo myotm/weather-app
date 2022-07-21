@@ -40,9 +40,9 @@ export default function WeatherComponent() {
     <div>
       <form onSubmit= {(e) => { e.preventDefault(); 
         callWeatherAPI()}} >
-        <label for="zipCode">Zip Code</label>
+        <label>Zip Code</label>
         <input type="text" id="zipCode" name="zipCode" value={zipCode} onChange={onZipCodeChange} />
-        <label for="countryCode">Country Code</label>
+        <label>Country Code</label>
         <input type="text" id="countryCode" name="countryCode" value={countryCode} onChange={onCountryCodeChange} />
         <button type="submit" >Submit</button>
       </form>
