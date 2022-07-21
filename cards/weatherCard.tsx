@@ -1,11 +1,10 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 type Props = {
     icon: string;
     description: string;
-    temperature: number;
+    temperature: string;
     location: string;
 };
 
@@ -19,6 +18,9 @@ const WeatherCard = ({icon, description, temperature, location}: Props) => {
             <Card.Title>{location}</Card.Title>
             <Card.Text>
                 {description}
+            </Card.Text>
+            <Card.Text>
+                {temperature}
             </Card.Text>
         </Card.Body>
     </Card>

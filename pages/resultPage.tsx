@@ -1,18 +1,15 @@
 import React from 'react'
 import WeatherCard from '../cards/weatherCard';
+import { useRouter } from 'next/router'
 
-type Props = {
-    icon: string;
-    description: string;
-    temperature: number;
-    location: string;
-};
+const ResultPage = () => {
 
-const ResultPage = ({icon, description, temperature, location}: Props) => {
+    const router = useRouter();
+    const {icon, description, temperature, location} = router.query;
 
   return (
     <div>
-        <WeatherCard icon={icon} description={description} temperature={temperature} location={location}></WeatherCard>
+        <WeatherCard icon={icon as string} description={description as string} temperature={temperature as string} location={location as string} ></WeatherCard>
     </div>
     
   )
