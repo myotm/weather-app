@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card';
+import 'tailwindcss/tailwind.css'
 
 type Props = {
     icon: string;
@@ -10,20 +10,24 @@ type Props = {
 
 const WeatherCard = ({icon, description, temperature, location}: Props) => {
 
-    const iconURL = "http://openweathermap.org/img/wn/"+icon+"@2x.png"
+    const iconURL = "http://openweathermap.org/img/wn/"+icon+"@4x.png"
   return (
-    <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={iconURL} />
-        <Card.Body>
-            <Card.Title>{location}</Card.Title>
-            <Card.Text>
-                {description}
-            </Card.Text>
-            <Card.Text>
-                {temperature}
-            </Card.Text>
-        </Card.Body>
-    </Card>
+        <div className='flex w-96 rounded-lg border border-gray-200 shadow-md bg-blue-500'>
+            <img className='rounded-t-lg' src={iconURL} />
+            <div className='w-full justify-center items-center text-center bg-white'>
+                <h5 className="m-2 text-2xl font-bold tracking-tight text-gray-900">
+                    {location}
+                </h5>
+                <p className="m-3 font-normal text-gray-700 ">
+                    {description}
+                </p>
+                <p className="m-3 font-normal text-gray-700 ">
+                {temperature} 'C
+                </p>
+            </div>
+            
+        </div>
+        
   )
 }
 
