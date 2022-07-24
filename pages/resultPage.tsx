@@ -19,11 +19,11 @@ const ResultPage = () => {
 
   return (
     <div className='flex flex-col w-full justify-center items-center'>
-      <div className='flex gap-2 m-2'>
-        <button onClick={backButtonPressed} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold p-2 px-4 rounded">
+      <div className='flex-col xs:flex gap-2 m-2 '>
+        <button onClick={backButtonPressed} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold p-2 px-4 m-1 justify-center rounded">
           Go Back
         </button>
-        <button onClick={backButtonPressed} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold p-2 px-4 rounded">
+        <button onClick={backButtonPressed} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold p-2 px-4 m-1 rounded">
           Get 5-day forecast!
         </button>
       </div>
