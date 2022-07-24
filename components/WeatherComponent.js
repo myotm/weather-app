@@ -28,7 +28,7 @@ export default function WeatherComponent() {
           icon: data.weather[0].icon,
           description: data.weather[0].description,
           temperature: (data.main.temp - 273.15).toFixed(1)+ '°C', // subtract 273.15 to convert from Kelvin to Celsius
-          location: data.name
+          location: data.name,
         }
       });
     } catch (err) {

@@ -27,7 +27,7 @@ const ResultPage = () => {
           Get 5-day forecast!
         </button>
       </div>
-      <WeatherCard icon={icon as string} description={description as string} temperature={temperature as string} location={location as string} dateTime={dateTime as string} ></WeatherCard>
+      <WeatherCard icon={icon as string} description={description as string} temperature={temperature as string} location={location as string} dateTime={''} ></WeatherCard>
     </div>
     
   )
