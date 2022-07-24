@@ -6,7 +6,7 @@ import 'tailwindcss/tailwind.css'
 const ResultPage = () => {
 
     const router = useRouter();
-    const {icon, description, temperature, location} = router.query;
+    const {icon, description, temperature, location, dateTime} = router.query;
 
     const backButtonPressed = async () => {
       try{
@@ -27,7 +27,7 @@ const ResultPage = () => {
           Get 5-day forecast!
         </button>
       </div>
-      <WeatherCard icon={icon as string} description={description as string} temperature={temperature as string} location={location as string} ></WeatherCard>
+      <WeatherCard icon={icon as string} description={description as string} temperature={temperature as string} location={location as string} dateTime={dateTime as string} ></WeatherCard>
     </div>
     
   )
