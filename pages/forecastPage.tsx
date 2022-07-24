@@ -9,13 +9,6 @@ const ForecastPage = () => {
     const {cityName} = router.query;
 
     const [weatherArray, setWeatherArray] = React.useState([]);
-
-    // const [weatherArray, setWeatherArray] = React.useState([
-    //   {
-        
-    //   }
-    // ]);
-
     const backButtonPressed = async () => {
         try{
           router.push('/');
@@ -32,7 +25,8 @@ const ForecastPage = () => {
           icon: item.weather[0].icon, 
           description: item.weather[0].description,
           temperature: (item.main.temp - 273.15).toFixed(1) + '°C',
-          location: cityName as string
+          location: cityName as string,
+          dateTime: item.dt_txt
         })));
         
         } catch (err) {
@@ -47,10 +41,11 @@ const ForecastPage = () => {
     return (
         <div className=''>
             <button onClick={backButtonPressed} >Go Back</button>
-            <div className='grid grid-flow-col grid-cols-3 grid-rows-3 gap-4'>
+            <div className='grid grid-flow-row grid-cols-1 grid-rows-3 md:grid-cols-5 lg:grid-cols-8 gap-4'>
               {weatherArray.length > 0 && weatherArray.map((item : any, index) => {
                 return (
-                  <WeatherCard key={index} icon={item.icon as string} description={item.description as string} temperature={item.temperature as string} location={item.location as string}/>
+                  <WeatherCard key={index} icon={item.icon as string} 
+                  description={item.description as string} temperature={item.temperature as string} location={item.location as string} dateTime={item.dateTime as string}/>
                 )
               })}
             </div>
