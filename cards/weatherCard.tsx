@@ -97,7 +97,7 @@ const WeatherCard = ({icon, description, temperature, location, dateTime}: Props
                     {getDayOfWeek(weatherDate)}, {getNameOfMonth(weatherDate)}
                 </p>
                 <p className='m-3 text-xs font-normal text-gray-700'>
-                    {(Number(hour) > 12 ?  Number(hour) - 12 : Number(hour))}:{minute}
+                    {(Number(hour) > 12 ?  Number(hour) - 12 : Number(hour) == 0 ? 12 : Number(hour))}:{minute}{(Number(hour) >= 12 ?  "PM" : "AM")}
                 </p>
             </div>
             
