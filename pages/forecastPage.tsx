@@ -6,7 +6,6 @@ import 'tailwindcss/tailwind.css'
 
 const ForecastPage = () => {
     const router = useRouter();
-    const {cityName,setCityName} = router.query;
 
     const [weatherArray, setWeatherArray] = React.useState([]);
     const backButtonPressed = async () => {
@@ -19,6 +18,7 @@ const ForecastPage = () => {
 
       const callForecastAPI = async () => {
         try {
+        const {cityName} = router.query;
         const res = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=3b7363a01be6f1a1d6dd6cc797d1107a`)
         const data = await res.json();
         const city = data.city.name;
@@ -36,8 +36,9 @@ const ForecastPage = () => {
     }
 
     useEffect(() => {
+      if(!router.isReady) return;
       callForecastAPI();
-    }, []);
+    }, [router.isReady]);
 
     return (
         <div className='flex flex-col w-full items-center'>
