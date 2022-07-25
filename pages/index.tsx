@@ -5,11 +5,11 @@ import 'tailwindcss/tailwind.css'
 const Home = () => {
 
   return (
-    <div>
-      <div className='text-center w-1/2 m-32 sm:m-60'>
+    <div className='flex flex-col w-full items-center'>
+      <div className='text-center w-72 m-10 sm:m-24'>
         <WeatherComponent />
     </div>
-    <div className='text-center w-1/2 m-32 sm:m-60'>
+    <div className='text-center w-72 m-10 sm:m-24'>
         <ForecastComponent />
     </div>
     </div>

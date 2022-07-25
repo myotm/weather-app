@@ -40,7 +40,7 @@ const ForecastPage = () => {
     }, []);
 
     return (
-        <div className=''>
+        <div className='flex flex-col w-full items-center'>
             <button className='bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold p-2 px-4 m-1 justify-center rounded' onClick={backButtonPressed} >Go Back</button>
             <div className='grid grid-flow-row grid-cols-1 grid-rows-3 w-3/4 sm:grid-cols-3 sm:w-auto lg:grid-cols-5 gap-4 '>
               {weatherArray.length > 0 && weatherArray.map((item : any, index) => {
